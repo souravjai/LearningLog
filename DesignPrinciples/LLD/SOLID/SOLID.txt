@@ -1,0 +1,28 @@
+
+SOLID Design priciple
+
+S-> Single Design principle 
+    - Each class should have only reason to change.
+
+O-> Open/Close principle
+    - Classes should be open to Extension but close for modification
+    - Already tested classes should not be changes if you want alternative way for a function then create a interface and implment it.
+    - Suppose there a class with behavior save, Now we can saveToDB , saveToFile, saveToSQL..., so you dont know in future what will come so create a interface that is open for extension, but it is closed for any modification
+
+L-> Liskov Substitution Principle
+    - Every subclass object can substituted instead of parent class without breaking code.
+    - Every subchild should Extend features/Property not narrow it down.
+    - If you need functionality to narrow down then you need to rethink and refactor
+
+I-> Interface Segregation Principle
+    - Interface should be such that client should not implement un-necessary functions.
+    - 
+        -Suppose Interface I has 3 methods
+        - 2 methods is required in Class A
+        - 1 method is required in Class B
+    Then break Interfae I to I2 with 2 mehtods and I1 with 1 method and I with both interfae I1 & I2
+
+D-> Dependency Inversion principle
+    - Classes should depend on interface rather than concrete method.
+    - Suppose with have KeyboardInterface and classes WiredKeyboard and BluetoothKeyboard
+        Then in class we should you KeyboardInterface only and not concrete classes.

@@ -1,4 +1,4 @@
-package TopInterview150;
+package DSA.TopInterview150;
 
 /*
 * TC: O(N+M)

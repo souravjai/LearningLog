@@ -1,4 +1,4 @@
-package Leetcode75;
+package DSA.Leetcode75;
 /* First solution
 * TC: O(M+N)
 * SC: O(N) 

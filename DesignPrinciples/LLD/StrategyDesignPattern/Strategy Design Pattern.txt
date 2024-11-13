@@ -1,0 +1,21 @@
+The Strategy Design Pattern is a behavioral pattern that enables selecting an algorithm's behavior at runtime.
+
+It defines a family of algorithms, encapsulates each one, and makes them interchangeable within the context of the object using them.
+
+Basically and interface that has certain method and other classes implments to interface.
+Main Execution class will 'has a' interface and other can get the object of any pattern.
+
+Key Points:
+Purpose: To enable a class's behavior to be selected at runtime without modifying the class itself.
+
+Components:
+Strategy Interface: Defines a common interface for all supported algorithms.
+Concrete Strategies: Implement specific algorithms following the strategy interface.
+
+Context Class: Holds a reference to a strategy and delegates algorithm execution to it.
+
+Benefits:
+Increases flexibility by allowing algorithms to be easily swapped.
+Promotes code reuse and adheres to the Open-Closed Principle (OCP).
+Example: A payment system with strategies like CreditCardPayment and PayPalPayment, allowing the user to choose the payment method at runtime.
+In summary, the Strategy Pattern enables flexible, reusable algorithms that can be selected and changed dynamically.

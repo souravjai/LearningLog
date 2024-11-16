@@ -1,0 +1,32 @@
+This pattern is used when we wrap a object inside another object which itself becomes an object.
+
+Object A(Object A) -> Object A
+
+
+interface A{
+    void method()
+}
+
+class A1 implements A{ void method()}
+class A2 implements A{ void method() }
+
+abstract class ADecorator implements A{
+    protected A a;
+
+    ADecorator(A obj_a){
+        a=obj_a;
+    }
+    method()
+}
+
+class BWrapper extends class ADecorator{
+    BWrapper(A a){
+        super(a);
+    }
+
+    void method(){
+        super.method()+"This.method";
+    }
+}
+
+

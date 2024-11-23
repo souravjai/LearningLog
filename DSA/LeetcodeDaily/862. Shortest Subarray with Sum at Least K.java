@@ -1,3 +1,7 @@
+package LeetcodeDaily;
+
+import java.util.PriorityQueue;
+
 /*
 * TC: O(NlogN)
 * SC: O(N)

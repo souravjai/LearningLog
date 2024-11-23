@@ -1,4 +1,4 @@
-package DSA.LeetcodeDaily;
+package LeetcodeDaily;
 
 import java.util.PriorityQueue;
 

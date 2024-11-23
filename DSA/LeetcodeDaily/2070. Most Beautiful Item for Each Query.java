@@ -1,4 +1,5 @@
-package DSA.LeetcodeDaily;
+package LeetcodeDaily;
+
 
 import java.util.Arrays;
 

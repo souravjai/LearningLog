@@ -1,3 +1,5 @@
+package LeetcodeDaily;
+
 class Solution {
     public int[] decrypt(int[] code, int k) {
         int n = code.length;

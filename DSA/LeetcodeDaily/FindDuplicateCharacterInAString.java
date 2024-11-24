@@ -1,7 +1,4 @@
-package DSA.LeetcodeDaily;
-
-
-
+package LeetcodeDaily;
 
 class Test {
     public static void main(String[] args) {

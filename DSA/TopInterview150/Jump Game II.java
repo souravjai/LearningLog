@@ -9,15 +9,15 @@ So we carried the range with l & r thus having a greedy solution
 
 class Solution {
     public int jump(int[] nums) {
-        int jumps = 0,l=0,r=0,n=nums.length;
+        int jumps = 0, l = 0, r = 0, n = nums.length;
 
-        while(r<n-1){
+        while (r < n - 1) {
             int max = 0;
-            for(int i = l;i<=r;i++){
-                max=Math.max(max,nums[i]+i);
+            for (int i = l; i <= r; i++) {
+                max = Math.max(max, nums[i] + i);
             }
-            l=r+1;
-            r=max;
+            l = r + 1;
+            r = max;
             jumps++;
         }
 
@@ -25,7 +25,9 @@ class Solution {
     }
 }
 
-TC:O(N^2)SC:O(N)*/
+/*
+ * TC:O(N^2)SC:O(N)
+ */
 
 class Solution_OLD {
     public int jump(int[] nums) {

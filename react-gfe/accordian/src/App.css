@@ -10,7 +10,8 @@
 	padding: 5px 10px;
 }
 
-.accordian__ele:hover {
+.accordian__ele:hover,
+.accordian__ele:focus {
 	background-color: lightgrey;
 }
 .accordian[aria-expanded="true"]:hover {

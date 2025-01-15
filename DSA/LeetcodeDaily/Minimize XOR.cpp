@@ -1,30 +1,78 @@
-class Solution {
+class Solution
+{
 public:
-    int bitsCount(int n) {
+    int bitsCount(int n)
+    {
         int count = 0;
-        while (n > 0) {
+        while (n > 0)
+        {
             n &= n - 1;
             count++;
         }
 
         return count;
     }
-    int minimizeXor(int num1, int num2) {
+    int minimizeXor(int num1, int num2)
+    {
         int num1_bits = bitsCount(num1);
         int num2_bits = bitsCount(num2);
 
-        if (num1_bits > num2_bits) {
+        int isNum1BitsMore = num1_bits > num2_bits;
+        int excess = abs(num1_bits - num2_bits);
+
+        while (excess > 0)
+        {
+            if (isNum1BitsMore)
+                num1 = num1 & (num1 - 1);
+            else
+                num1 = num1 | (num1 + 1);
+
+            excess--;
+        }
+
+        return num1;
+    }
+};
+// 2
+// 3
+// 0 1 1 0 0 1
+//   1 1 0 0 0
+
+class Solution
+{
+public:
+    int bitsCount(int n)
+    {
+        int count = 0;
+        while (n > 0)
+        {
+            n &= n - 1;
+            count++;
+        }
+
+        return count;
+    }
+    int minimizeXor(int num1, int num2)
+    {
+        int num1_bits = bitsCount(num1);
+        int num2_bits = bitsCount(num2);
+
+        if (num1_bits > num2_bits)
+        {
             num2_bits = num1_bits - num2_bits;
-            while (num2_bits > 0) {
+            while (num2_bits > 0)
+            {
                 num1 = num1 & (num1 - 1);
                 num2_bits--;
             }
         }
 
-        else if (num1_bits < num2_bits) {
+        else if (num1_bits < num2_bits)
+        {
             num2_bits -= num1_bits;
 
-            while (num2_bits > 0) {
+            while (num2_bits > 0)
+            {
                 num1 = num1 | (num1 + 1);
                 num2_bits--;
             }

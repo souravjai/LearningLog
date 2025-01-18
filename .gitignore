@@ -1,2 +1,4 @@
 *.class
 **/node_modules/
+
+leetcodeBot.js

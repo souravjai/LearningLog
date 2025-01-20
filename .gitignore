@@ -1,4 +1,6 @@
 *.class
 **/node_modules/
 
+**/*.exe
+
 leetcodeBot.js
